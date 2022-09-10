@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "f2cab990-fcbb-4d9f-9544-60ca9fe97a91",
+		"name": "postman_collection_list",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14422741"
+	},
+	"item": [
+		{
+			"name": "Create Short URL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyODMwODQwLCJpYXQiOjE2NjI4MzA1NDAsImp0aSI6IjIzNjUyZDgyYTdhNDQ1Mjg5MWE0ODU1YzJjZjQ2ZGZhIiwidXNlcl9pZCI6NH0.X4wh3rnsu6yHai5hTM7tFECNGVrF4cvqQUgoeBCXC24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "longurl",
+							"value": "https://pyimagesearch.com/2020/10/12/multi-class-object-detection-and-bounding-box-regression-with-keras-tensorflow-and-deep-learning/",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/shorten/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"shorten",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token generation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Mohammad",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "asdf6789#",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve long URL",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYyODMwNTQ5LCJpYXQiOjE2NjI4MzAyNDksImp0aSI6Ijk3ZDYxOTZmZjNhYjQwNTRiOTY2ZTcyM2JjYWRiNTE0IiwidXNlcl9pZCI6NH0.TzG-cDsXORFCMfQbn9kmZhSE498YRAGtNY6uj83gV8g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/*rocbA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"*rocbA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Hossain_Shahnawaz",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "hossain11shah@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "PRIVATE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Hossain_Shahnawaz",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "PRIVATE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
